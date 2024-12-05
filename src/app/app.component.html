@@ -1,26 +1,17 @@
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * Delete the template below * * * * * * * * * -->
-<!-- * * * * * * * to get started with your project! * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
 <style></style>
 
-<main class="main">
-  <div class="content">
-    <h1 class="text-3xl font-bold underline">Hello world!</h1>
-  </div>
+<main class="p-8 ...">
+  <nav class="flex justify-between ...">
+    <div class="w-24 ...">
+      <a routerLink="/"
+        ><img src="/images/Logo-petit-village.jpg" alt="logo petit village"
+      /></a>
+    </div>
+    <div class="inline-flex items-center gap-x-32 pr-8 text-3xl ...">
+      <a routerLink="/about"> A propos</a>
+      <a routerLink="/contact">Contact</a>
+    </div>
+  </nav>
 </main>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced.  * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder  * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <router-outlet />
