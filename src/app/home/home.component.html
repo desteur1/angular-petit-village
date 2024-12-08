@@ -1,1 +1,51 @@
-<p>home works!</p>
+<main>
+  <section class="text-2xl text-center my-8 ...">
+    <p>
+      <span>{{ title }}</span> est une entreprise qui confectionne des figurines
+      inpirées de la bande dessinée <strong>Astérix et Obélix</strong>
+    </p>
+  </section>
+  <section>
+    <h2 class="flex justify-center my-4 text-xl">Nos produits</h2>
+    <div class="my-4">
+      <label for="sort">Sort by:</label>
+      <select
+        [(ngModel)]="sortOrder"
+        [ngModelOptions]="{ standalone: true }"
+        id="sort"
+      >
+        <option value="asc">Price (Low to High)</option>
+        <option value="desc">Price (High to Low)</option>
+      </select>
+    </div>
+    <div>
+      <label for="search">Search:</label>
+      <input
+        type="text"
+        id="search"
+        [(ngModel)]="searchTerm"
+        placeholder="Search for a product...."
+        [ngModelOptions]="{ standalone: true }"
+      />
+    </div>
+    <ul class="grid grid-cols-2 justify-items-center mt-12">
+      <li
+        *ngFor="
+          let product of products
+            | sortByPrice : sortOrder
+            | research : searchTerm
+        "
+        class="cursor-pointer"
+      >
+        <img
+          [src]="product.imageUrl"
+          alt="{{ product.name }}"
+          class="w-64 ..."
+        />
+        <h3>{{ product.name }}</h3>
+        <!-- <p>{{ product.description }}</p> -->
+        <p>Price: {{ product.price }}</p>
+      </li>
+    </ul>
+  </section>
+</main>
