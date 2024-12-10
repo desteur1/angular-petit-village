@@ -37,14 +37,16 @@
         "
         class="cursor-pointer"
       >
-        <img
-          [src]="product.imageUrl"
-          alt="{{ product.name }}"
-          class="w-64 ..."
-        />
-        <h3>{{ product.name }}</h3>
-        <!-- <p>{{ product.description }}</p> -->
-        <p>Price: {{ product.price }}</p>
+        <a [routerLink]="['/product', product.id]">
+          <img
+            [src]="product.imageUrl"
+            alt="{{ product.name }}"
+            class="w-64 ..."
+          />
+          <h3>{{ product.name }}</h3>
+          <!-- <p>{{ product.description }}</p> -->
+          <p>Price: {{ product.price }}</p>
+        </a>
       </li>
     </ul>
   </section>

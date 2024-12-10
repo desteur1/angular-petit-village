@@ -5,10 +5,18 @@ import { CommonModule } from '@angular/common';
 import { SortByPricePipe } from '../sort-by-price.pipe';
 import { ResearchPipe } from '../research.pipe';
 import { FormsModule } from '@angular/forms'; //is the key that enables two-way data binding using ngModel in Angular
+import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-home',
-  imports: [CommonModule, FormsModule, SortByPricePipe, ResearchPipe],
+  imports: [
+    CommonModule,
+    FormsModule,
+    SortByPricePipe,
+    ResearchPipe,
+    RouterLink,
+    RouterModule,
+  ],
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
