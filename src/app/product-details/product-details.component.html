@@ -1,12 +1,27 @@
-<div *ngIf="product">
-  <h1>{{ product.name }}</h1>
-  <img [src]="product.imageUrl" alt="{{ product.name }}" class="w-48" />
-  <p><strong>Description:</strong>{{ product.description }}</p>
-  <p><strong>Price:</strong>{{ product.price }}</p>
-  <a routerLink="/" class="text-blue-500 underline cursor-pointer"
-    >Back to Home</a
+<div *ngIf="product" class="font-confortaa">
+  <h1
+    class="nav-bp:text-xl text-4xl text-primary py-[1rem] text-center font-bubbleboddy"
   >
+    {{ product.name }}
+  </h1>
+  <img
+    [src]="product.imageUrl"
+    alt="{{ product.name }}"
+    class="nav-bp:w-72 w-96 mx-auto"
+  />
+  <div class="nav-bp:text-lg nav-bp:mb-[10rem] text-xl text-center">
+    <p>
+      <strong class="text-secondary">Description: </strong
+      >{{ product.description }}
+    </p>
+    <p><strong class="text-secondary">Prix: </strong>{{ product.price }}</p>
+    <div class="w-full">
+      <a routerLink="/" class="text-yellowB text-center block my-[1rem]"
+        >Retour</a
+      >
+    </div>
+  </div>
 </div>
 <div *ngIf="!product">
-  <p>product not found.</p>
+  <p>pas de produit disponible.</p>
 </div>

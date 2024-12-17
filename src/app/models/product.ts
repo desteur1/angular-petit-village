@@ -3,6 +3,6 @@ export interface Product {
   name: string;
   description: string;
   price: number;
-
+  hideOnSmallScreen: boolean;
   imageUrl: string;
 }
