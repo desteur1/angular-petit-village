@@ -1,53 +1,80 @@
-<main>
-  <section class="text-2xl text-center my-8 ...">
+<main class="nav-bp:mb-[5rem] mb-[3rem] font-comfortaa">
+  <section class="nav-bp:text-lg text-2xl text-center my-8 ...">
     <p>
-      <span>{{ title }}</span> est une entreprise qui confectionne des figurines
-      inpirées de la bande dessinée <strong>Astérix et Obélix</strong>
+      <span class="text-secondary font-bubbleboddy">{{ title }}</span> est une
+      entreprise qui confectionne des figurines inspirées de la bande dessinée
+      <strong>Astérix et Obélix</strong>
     </p>
   </section>
   <section>
-    <h2 class="flex justify-center my-4 text-xl">Nos produits</h2>
-    <div class="my-4">
-      <label for="sort">Sort by:</label>
-      <select
-        [(ngModel)]="sortOrder"
-        [ngModelOptions]="{ standalone: true }"
-        id="sort"
-      >
-        <option value="asc">Price (Low to High)</option>
-        <option value="desc">Price (High to Low)</option>
-      </select>
+    <h2
+      class="nav-bp:text-2xl flex justify-center my-6 text-4xl text-secondary font-bubbleboddy"
+    >
+      Nos produits
+    </h2>
+    <div class="text-right">
+      <div>
+        <label for="search">Recherche: </label>
+        <input
+          type="text"
+          id="search"
+          [(ngModel)]="searchTerm"
+          placeholder="search for a product...."
+          [ngModelOptions]="{ standalone: true }"
+        />
+      </div>
+      <div class="my-4 pr-6">
+        <label for="sort">trier par:</label>
+        <select
+          [(ngModel)]="sortOrder"
+          [ngModelOptions]="{ standalone: true }"
+          id="sort"
+        >
+          <option value="asc">Prix (Low to High)</option>
+          <option value="desc">Prix (High to Low)</option>
+        </select>
+      </div>
     </div>
-    <div>
-      <label for="search">Search:</label>
-      <input
-        type="text"
-        id="search"
-        [(ngModel)]="searchTerm"
-        placeholder="Search for a product...."
-        [ngModelOptions]="{ standalone: true }"
-      />
-    </div>
-    <ul class="grid grid-cols-2 justify-items-center mt-12">
-      <li
+
+    <ul
+      class="grid nav-bp:grid-cols-3 max-sm:gap-y-12 grid-cols-4 justify-items-center mt-12"
+    >
+      <ng-container
         *ngFor="
           let product of products
             | sortByPrice : sortOrder
             | research : searchTerm
         "
-        class="cursor-pointer"
       >
-        <a [routerLink]="['/product', product.id]">
-          <img
-            [src]="product.imageUrl"
-            alt="{{ product.name }}"
-            class="w-64 ..."
-          />
-          <h3>{{ product.name }}</h3>
-          <!-- <p>{{ product.description }}</p> -->
-          <p>Price: {{ product.price }}</p>
-        </a>
-      </li>
+        <li
+          class="cursor-pointer"
+          [class.hidden]="product.hideOnSmallScreen"
+          [class.sm:block]="product.hideOnSmallScreen"
+        >
+          <a [routerLink]="['/product', product.id]" class="text-center">
+            <img
+              [src]="product.imageUrl"
+              alt="{{ product.name }}"
+              class="w-64 ..."
+            />
+            <h3 class="font-bubbleboddy">{{ product.name }}</h3>
+            <!-- <p>{{ product.description }}</p> -->
+            <p class="text-secondary">Price: {{ product.price }}</p>
+          </a>
+        </li>
+      </ng-container>
     </ul>
   </section>
 </main>
+
+<!--
+1- [class.hidden]="product.hideOnSmallScreen : hide on small screens. e.g  hides the product by default if product.hideOnSmallScreen is true
+2- [class.sm:block]="product.hideOnSmallScreen : always show on large screens. e.g Tailwind's sm:block ensures that the product will always be visible on large screens (640px and up) regardless of product.hideOnSmallScreen
+
+SUM--- hidden: hides the product initially (on all screens).
+sm:block: makes the product visible again only on large screens
+-- sm:block = @media (min-width: 640px) e.g his CSS rule only applies to screens that are 640px or larger.
+3- Tailwind's responsive classes like sm:block take precedence on larger screens. So even if an element has hidden applied, sm:block overrides it on screens sm and up.
+
+
+-->
