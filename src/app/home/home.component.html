@@ -1,69 +1,77 @@
 <main class="nav-bp:mb-[5rem] mb-[3rem] font-comfortaa">
-  <section class="nav-bp:text-lg text-2xl text-center my-8 ...">
-    <p>
+  <section class="nav-bp:text-lg text-2xl text-center my-10 ...">
+    <p class="py-8">
       <span class="text-secondary font-bubbleboddy">{{ title }}</span> est une
-      entreprise qui confectionne des figurines inspirées de la bande dessinée
+      entreprise qui confectionne des figurines <br class="hidden sm:block" />
+      <br class="hidden sm:block" />
+      inspirées de la bande dessinée
       <strong>Astérix et Obélix</strong>
     </p>
   </section>
-  <section>
-    <h2
-      class="nav-bp:text-2xl flex justify-center my-6 text-4xl text-secondary font-bubbleboddy"
+  <section class="min-h-screen flex items-center justify-center py-8">
+    <div
+      class="bg-white shadow-md rounded-lg p-6 mx-auto max-w-4xl w-full px-2"
     >
-      Nos produits
-    </h2>
-    <div class="text-right">
-      <div>
-        <label for="search">Recherche: </label>
-        <input
-          type="text"
-          id="search"
-          [(ngModel)]="searchTerm"
-          placeholder="search for a product...."
-          [ngModelOptions]="{ standalone: true }"
-        />
-      </div>
-      <div class="my-4 pr-6">
-        <label for="sort">trier par:</label>
-        <select
-          [(ngModel)]="sortOrder"
-          [ngModelOptions]="{ standalone: true }"
-          id="sort"
-        >
-          <option value="asc">Prix (Low to High)</option>
-          <option value="desc">Prix (High to Low)</option>
-        </select>
-      </div>
-    </div>
-
-    <ul
-      class="grid nav-bp:grid-cols-3 max-sm:gap-y-12 grid-cols-4 justify-items-center mt-12"
-    >
-      <ng-container
-        *ngFor="
-          let product of products
-            | sortByPrice : sortOrder
-            | research : searchTerm
-        "
+      <h2
+        class="nav-bp:text-2xl flex justify-center my-6 text-4xl text-secondary font-bubbleboddy"
       >
-        <li
-          class="cursor-pointer"
-          [class.hidden]="product.hideOnSmallScreen"
-          [class.sm:block]="product.hideOnSmallScreen"
+        Nos produits
+      </h2>
+      <div class="text-right">
+        <div>
+          <label for="search">Recherche: </label>
+          <input
+            type="text"
+            id="search"
+            [(ngModel)]="searchTerm"
+            placeholder="search for a product...."
+            [ngModelOptions]="{ standalone: true }"
+          />
+        </div>
+        <div class="my-4 pr-6">
+          <label for="sort">trier par:</label>
+          <select
+            [(ngModel)]="sortOrder"
+            [ngModelOptions]="{ standalone: true }"
+            id="sort"
+          >
+            <option value="asc">Prix (Low to High)</option>
+            <option value="desc">Prix (High to Low)</option>
+          </select>
+        </div>
+      </div>
+
+      <ul
+        class="grid nav-bp:grid-cols-3 max-sm:gap-y-12 grid-cols-4 justify-items-center mt-12"
+      >
+        <ng-container
+          *ngFor="
+            let product of products
+              | sortByPrice : sortOrder
+              | research : searchTerm
+          "
         >
-          <a [routerLink]="['/product', product.id]" class="text-center">
-            <img
-              [src]="product.imageUrl"
-              alt="{{ product.name }}"
-              class="w-64 ..."
-            />
-            <h3 class="font-bubbleboddy">{{ product.name }}</h3>
-            <!-- <p>{{ product.description }}</p> -->
-            <p class="text-secondary">Price: {{ product.price }}</p>
-          </a>
-        </li>
-      </ng-container>
-    </ul>
+          <li
+            class="cursor-pointer"
+            [class.hidden]="product.hideOnSmallScreen"
+            [class.sm:block]="product.hideOnSmallScreen"
+          >
+            <a [routerLink]="['/product', product.id]" class="text-center">
+              <img
+                [src]="product.imageUrl"
+                alt="{{ product.name }}"
+                class="opacity-90 hover:opacity-100 w-64 ..."
+                width="256"
+                height="auto"
+              />
+              <h3 class="font-bubbleboddy">{{ product.name }}</h3>
+              <!-- <p>{{ product.description }}</p> -->
+              <p class="text-secondary">Price: {{ product.price }}</p>
+            </a>
+          </li>
+        </ng-container>
+      </ul>
+    </div>
   </section>
 </main>
 

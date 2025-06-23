@@ -2,19 +2,28 @@
 
 <main class="px-8 bg-dark ...">
   <nav class="flex justify-between ...">
-    <div class="w-24 ...">
+    <div>
       <a routerLink="/"
         ><img
           src="/images/Logo-petit-village.jpg"
           alt="logo petit village"
-          class="max-sm:w-12"
+          class="w-12 sm:w-24 opacity-90 hover:opacity-100"
       /></a>
     </div>
     <div
       class="nav-bp:text-xl nav-bp:gap-x-10 inline-flex items-center gap-x-32 pr-8 text-5xl ..."
     >
-      <a routerLink="/about" class="text-secondary"> A propos</a>
-      <a routerLink="/contact" class="text-primary">Contact</a>
+      <a
+        routerLink="/about"
+        class="text-secondary opacity-90 hover:opacity-100"
+      >
+        A propos</a
+      >
+      <a
+        routerLink="/contact"
+        class="text-secondary opacity-90 hover:opacity-100"
+        >Contact</a
+      >
     </div>
   </nav>
 </main>
@@ -23,14 +32,17 @@
 <footer class="bg-dark py-[10px]">
   <nav class="flex px-8">
     <a routerLink="/"
-      ><img src="/images/return-icon.jpg" alt="return-icon" class="w-10 ..."
+      ><img
+        src="/images/return-icon.jpg"
+        alt="return-icon"
+        class="opacity-90 hover:opacity-100 w-7 sm:w-10 rounded-full"
     /></a>
     <div class="w-full flex justify-end gap-x-10 ...">
       <a routerLink="/about"
         ><img
-          src="/images/about-us-logo.png"
+          src="/images/about-us-logo-bg.png"
           alt="about-us-logo"
-          class="w-10 ..."
+          class="opacity-90 hover:opacity-100 w-7 sm:w-10 rounded-full"
       /></a>
       <a
         href="https://github.com/desteur1/angular-petit-village"
@@ -38,7 +50,7 @@
         ><img
           src="/images/github.jpg"
           alt="logo github"
-          class="w-10 rounded-full ..."
+          class="opacity-90 hover:opacity-100 w-7 sm:w-10 rounded-full ..."
         />
       </a>
     </div>

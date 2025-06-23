@@ -12,7 +12,7 @@ export class ProductsService {
       description:
         'Abraracourcix, le chef du village Gaulois qui ne se gène pas pour nous le rappeler "Le chef ici, cest moi !',
       price: 50,
-      imageUrl: '/images/abraracourcix.webp',
+      imageUrl: '/images/abraracourcix-bg.png',
       hideOnSmallScreen: false,
     },
     {
@@ -21,7 +21,7 @@ export class ProductsService {
       description:
         'Avec votre figurine Tonie Astérix Le Gaulois et votre Toniebox (vendues séparément), embarquez pour une aventure audio unique (env. 40 minutes), inspirée de la bande dessinée originale. Une fois laventure terminée, prolongez lexpérience de jeu dans le monde réel avec cette attachante figurine peinte à la main.',
       price: 40,
-      imageUrl: '/images/Asterix.webp',
+      imageUrl: '/images/Asterix-2.png',
       hideOnSmallScreen: true,
     },
     {
@@ -30,7 +30,7 @@ export class ProductsService {
       description:
         'Figurine de collection Plastoy Astérix: Idéfix. Matière: vinyle. Hauteur: 30cm.',
       price: 110,
-      imageUrl: '/images/plastoy-asterix.webp',
+      imageUrl: '/images/plastoy-asterixbg.png',
       hideOnSmallScreen: false,
     },
     {
@@ -39,7 +39,7 @@ export class ProductsService {
       description:
         'Avec votre figurine Tonie Astérix Le Gaulois et votre Toniebox (vendue séparément), embarquez pour une aventure audio unique (env. 40 minutes), inspirée de la bande dessinée originale.',
       price: 80,
-      imageUrl: '/images/asterix-le-gaulois.jpg ',
+      imageUrl: '/images/asterix_le_gauloisbg.png ',
       hideOnSmallScreen: false,
     },
     {
@@ -48,7 +48,7 @@ export class ProductsService {
       description:
         'On ne présente plus Astérix et Défi. Ils forment avec Obélix un trio inséparable, toujours prêts à partir à laventure ! revivez les aventures dAstérix avec cette figurine dAstérix et Défi',
       price: 50,
-      imageUrl: '/images/idéfix_large.webp',
+      imageUrl: '/images/idéfix_largebg.png',
       hideOnSmallScreen: false,
     },
     {
@@ -57,7 +57,7 @@ export class ProductsService {
       description:
         'Retrouvez Obélix et son tonneau. Quest-ce que transporte ce tonneau ? On espère que ce nest pas de la potion magique ; si cest le cas, les romains vont passer un sale quart d heure !',
       price: 99,
-      imageUrl: '/images/obelix-et-son-tonneau.webp',
+      imageUrl: '/images/obelix-et-son-tonneaubg.png',
       hideOnSmallScreen: false,
     },
     {
@@ -66,7 +66,7 @@ export class ProductsService {
       description:
         'Astérix en plein combat avec un légionnaire romain. La figurine est inspirée du jeu vidéo Astérix & Obélix.',
       price: 39,
-      imageUrl: '/images/asterix-paf.webp',
+      imageUrl: '/images/asterix-paf-bg.png',
       hideOnSmallScreen: true,
     },
     {
@@ -75,7 +75,7 @@ export class ProductsService {
       description:
         'Cest un chien blanc, le fidèle compagnon dObélix. Ce petit chien à la curieuse particularité de pleurer quand on coupe un arbre',
       price: 95,
-      imageUrl: '/images/idefix-bulle-coeur.jpg',
+      imageUrl: '/images/idefix-bulle-coeurbg.png',
       hideOnSmallScreen: false,
     },
     {
@@ -84,7 +84,7 @@ export class ProductsService {
       description:
         'Dans le tout premier album d’Astérix, on découvre la force d’Obélix qui porte non pas un mais deux menhirs. Il se sent un peu faible mais n’aura tout de même pas droit à la célèbre potion magique',
       price: 130,
-      imageUrl: '/images/obelix-livreur.jpg',
+      imageUrl: '/images/obelix-livreurbg.png',
       hideOnSmallScreen: true,
     },
     {
@@ -93,7 +93,7 @@ export class ProductsService {
       description:
         'Caius Bonus voulant s’emparer de la légendaire force surhumaine des gaulois apprendra à ses dépens que celle-ci est la propriété du village et de ses habitants. Astérix se laissera enchaîner avec bonne humeur',
       price: 165,
-      imageUrl: '/images/asterix-enchaine.jpg',
+      imageUrl: '/images/asterix-enchainebg.png',
       hideOnSmallScreen: true,
     },
     {
@@ -102,7 +102,7 @@ export class ProductsService {
       description:
         'Craquez pour cette belle figurine en plastique de 7 cm aux finitions soignées ! Embarquez pour une aventure palpitante dans lunivers des irréductibles Gaulois avec le livre Amérix dans La Serpe dOr ',
       price: 20,
-      imageUrl: '/images/amerix.webp',
+      imageUrl: '/images/amerix-bg.png',
       hideOnSmallScreen: true,
     },
     {
@@ -111,7 +111,7 @@ export class ProductsService {
       description:
         'Craquez pour cette belle figurine en plastique de 6,5 cm aux finitions soignées !Embarquez pour une aventure palpitante dans lunivers des irréductibles Gaulois avec le livre Alambix dans La Bouclier arverne ! ',
       price: 20,
-      imageUrl: '/images/alambix.jpg',
+      imageUrl: '/images/alambix-bg.png',
       hideOnSmallScreen: true,
     },
   ];
